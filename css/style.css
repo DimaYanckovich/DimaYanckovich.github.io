@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-SemiBold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-ExtraLight.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Light.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-ExtraBold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Black.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Thin.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* GENERAL COLORS */
+    --x-ixons-color: #57984C;
+
+
+
+    /* ===== HOMEPAGE ===== */
+
+    /* header */
+    --header-menu-search-color: #324950;
+
+    /* hero */
+    --hero-title-color: #735440;
+    --hero-button-color: #57984C;
+    --hero-button-text-color: #FFFFFF;
+
+    /* products */
+    --products-color: #324950;
+
+    /* vision */
+    --vision-text-color: #324950;
+
+    /* activities */
+    --activities-color: #57984C;
+    --activities-descr-color: #324950;
+
+
+}
+
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #EDEDED;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    list-style: none;
+}
+
+.link,
+.link:hover,
+.link:focus {
+    text-decoration: none;
+}
+
+
+.background-hero {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: 1920px 850px;
+    padding-top: 20px;
+
+    width: 1920px;
+    height: 850px;
+}
+
+
+.x-icons {
+    width: 47.24px;
+    height: 6.24px;
+    fill: var(--x-ixons-color);
+}
+
+
+/* ============================= HOMEPAGE START ============================= */
+
+/* === header === */
+
+
+.background-hero .search-items {
+    display: flex;
+    justify-content: end;
+}
+
+.background-hero .search-items .wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--header-menu-search-color);
+}
+
+.background-hero .search-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--header-menu-search-color);
+}
+
+.background-hero .search {
+    width: 332px;
+    border: 0;
+    background-color: transparent;
+}
+
+
+.background-hero .menu-list {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.background-hero .menu-list-items {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+
+    color: var(--header-menu-search-color);
+}
+
+.background-hero .menu-list-item-links,
+.background-hero .menu-list-item-links:hover,
+.background-hero .menu-list-item-links:focus {
+    color: inherit;
+
+}
+
+
+/* === HERO === */
+
+.hero {
+    padding-top: 229px;
+    padding-bottom: 305px;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.43;
+    text-align: center;
+    color: var(--hero-title-color);
+    margin-bottom: 60px;
+}
+
+.hero-button {
+    display: block;
+    margin: auto;
+    padding: 16px 31px;
+    background: var(--hero-button-color);
+    color: var(--hero-button-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.43;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border: 0;
+}
+
+/* === PRODUCTS === */
+
+.products {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    background-color: #FFFFFF;
+    margin-bottom: 70px;
+}
+
+.products-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+.product-svg {
+    fill: var(--products-color)
+}
+
+.products-list-item .wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.products-name {
+    font-size: 20px;
+    line-height: 1.43;
+    color: var(--products-color);
+}
+
+/* === VISION === */
+
+.vision {
+    background-image: url(../images/vision-bg.svg);
+    background-size: 1920px;
+    background-repeat: no-repeat;
+}
+
+.vision-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.43;
+    color: var(--vision-text-color);
+    margin-bottom: 25px;
+    margin-top: 106px;
+}
+
+.vision-text {
+    font-size: 20px;
+    line-height: 1.63;
+    color: var(--vision-text-color);
+    margin-top: 30px;
+}
+
+.vision-col {
+    padding: 0 0 100px 30px;
+}
+
+.vision-col-text-right {
+    padding-left: 60px;
+}
+
+.vision-col-text-left {
+    padding-right: 60px;
+}
+
+.vision-img {
+    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.25));
+}
+
+
+
+/* === MAIN ACTIVITIES === */
+
+.main-activities .link,
+.main-activities .link:hover,
+.main-activities .link:focus {
+    color: inherit;
+}
+
+.main-activities {
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.ma-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-activities .x-icons {
+    display: block;
+    margin: auto;
+}
+
+
+.activities-image-wrapper {
+    width: 360px;
+    height: 265px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.43;
+    color: var(--activities-color);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.activities-name::after {
+    display: block;
+    content: "";
+    width: 183px;
+    height: 1px;
+    margin-top: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--activities-color);
+}
+
+.activities-text {
+    font-size: 18px;
+    line-height: 1.43;
+    text-align: center;
+    color: ac;
+}
+
+/* ============================= HOMEPAGE END ============================= */
+
+
+
+
+
+/* ============================= TOMATO ALL START ============================= */
