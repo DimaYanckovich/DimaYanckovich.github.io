@@ -79,7 +79,7 @@
     font-display: swap;
 }
 
-:root {
+:root{
     /* GENERAL COLORS */
     --x-ixons-color: #57984C;
 
@@ -88,7 +88,7 @@
     /* ===== HOMEPAGE ===== */
 
     /* header */
-    --header-menu-search-color: #324950;
+        --header-menu-search-color: #324950;
 
     /* hero */
     --hero-title-color: #735440;
@@ -106,40 +106,41 @@
     --activities-descr-color: #324950;
 
 
+
+
+    /* ===== TOMATO ALL ===== */
+    /* tomato info */
+    --tomato-info-text-color: #324950;
+
+    /* tomato cards */
+    --tomato-cards-title-color: #324950;
+
+    /* tomato links card */
+    --tomato-links-cards-text-color:#57984C;
+
 }
 
 
-body {
+body{
     font-family: 'Roboto Slab', serif;
     background-color: #EDEDED;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-p,
-div {
+h1,h2,h3,h4,h5,h6,ul,ol,p,div{
     margin: 0;
     padding: 0;
 }
 
-.list {
+.list{
     list-style: none;
 }
 
-.link,
-.link:hover,
-.link:focus {
+.link, .link:hover, .link:focus {
     text-decoration: none;
 }
 
 
-.background-hero {
+.background-hero{
     background-image: url(../images/hero-bg.jpg);
     background-size: 1920px 850px;
     padding-top: 20px;
@@ -149,10 +150,10 @@ div {
 }
 
 
-.x-icons {
+.x-icons{
     width: 47.24px;
-    height: 6.24px;
-    fill: var(--x-ixons-color);
+        height: 6.24px;
+        fill: var(--x-ixons-color) ;
 }
 
 
@@ -161,47 +162,45 @@ div {
 /* === header === */
 
 
-.background-hero .search-items {
+.background-hero .search-items{
     display: flex;
     justify-content: end;
 }
 
-.background-hero .search-items .wrapper {
+.background-hero .search-items .wrapper{
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--header-menu-search-color);
 }
 
-.background-hero .search-icon {
+.background-hero .search-icon{
     width: 18px;
     height: 18px;
     fill: var(--header-menu-search-color);
 }
 
-.background-hero .search {
+.background-hero .search{
     width: 332px;
     border: 0;
     background-color: transparent;
 }
 
 
-.background-hero .menu-list {
+.background-hero .menu-list{
     margin-top: 42px;
     display: flex;
     justify-content: space-between;
 }
 
-.background-hero .menu-list-items {
+.background-hero .menu-list-items{
     font-weight: 500;
     font-size: 18px;
     line-height: 1.4;
 
-    color: var(--header-menu-search-color);
+    color: var(--header-menu-search-color) ;
 }
 
-.background-hero .menu-list-item-links,
-.background-hero .menu-list-item-links:hover,
-.background-hero .menu-list-item-links:focus {
+.background-hero .menu-list-item-links, .background-hero .menu-list-item-links:hover, .background-hero .menu-list-item-links:focus{
     color: inherit;
 
 }
@@ -209,26 +208,26 @@ div {
 
 /* === HERO === */
 
-.hero {
+.hero{
     padding-top: 229px;
     padding-bottom: 305px;
 }
 
-.hero-title {
+.hero-title{
     font-weight: 700;
     font-size: 48px;
     line-height: 1.43;
     text-align: center;
-    color: var(--hero-title-color);
+    color:var(--hero-title-color) ;
     margin-bottom: 60px;
 }
 
-.hero-button {
+.hero-button{
     display: block;
     margin: auto;
     padding: 16px 31px;
-    background: var(--hero-button-color);
-    color: var(--hero-button-text-color);
+    background: var(--hero-button-color) ;
+    color: var(--hero-button-text-color) ;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.43;
@@ -239,71 +238,71 @@ div {
 
 /* === PRODUCTS === */
 
-.products {
+.products{
     padding-top: 45px;
     padding-bottom: 40px;
     background-color: #FFFFFF;
     margin-bottom: 70px;
 }
 
-.products-list {
+.products-list{
     display: flex;
     justify-content: center;
     column-gap: 100px;
 }
 
-.product-svg {
+.product-svg{
     fill: var(--products-color)
 }
 
-.products-list-item .wrapper {
+.products-list-item .wrapper{
     display: flex;
     justify-content: center;
 }
 
-.products-name {
+.products-name{
     font-size: 20px;
     line-height: 1.43;
-    color: var(--products-color);
+    color:var(--products-color) ;
 }
 
 /* === VISION === */
 
-.vision {
+.vision{
     background-image: url(../images/vision-bg.svg);
     background-size: 1920px;
     background-repeat: no-repeat;
 }
 
-.vision-title {
+.vision-title{
     font-weight: 700;
-    font-size: 64px;
-    line-height: 1.43;
-    color: var(--vision-text-color);
-    margin-bottom: 25px;
-    margin-top: 106px;
+        font-size: 64px;
+        line-height: 1.43;
+        color: var(--vision-text-color);
+        margin-bottom: 25px;
+        margin-top: 106px;
 }
 
-.vision-text {
+.vision-text{
     font-size: 20px;
-    line-height: 1.63;
-    color: var(--vision-text-color);
-    margin-top: 30px;
+        line-height: 1.63;
+        color: var(--vision-text-color) ;
+        margin-top: 30px;
 }
 
-.vision-col {
-    padding: 0 0 100px 30px;
+.vision-col{
+padding: 0 0 100px 30px;
 }
 
-.vision-col-text-right {
-    padding-left: 60px;
+.vision-col-text-right{
+    padding-left: 60px ;
 }
 
 .vision-col-text-left {
     padding-right: 60px;
 }
 
-.vision-img {
+.vision-img{
     filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.25));
 }
 
@@ -311,29 +310,27 @@ div {
 
 /* === MAIN ACTIVITIES === */
 
-.main-activities .link,
-.main-activities .link:hover,
-.main-activities .link:focus {
+.main-activities .link, .main-activities .link:hover, .main-activities .link:focus{
     color: inherit;
 }
 
-.main-activities {
+.main-activities{
     padding-top: 70px;
     padding-bottom: 80px;
 }
 
-.ma-title {
+.ma-title{
     text-align: center;
     margin-bottom: 25px;
 }
 
-.main-activities .x-icons {
+.main-activities .x-icons{
     display: block;
     margin: auto;
 }
 
 
-.activities-image-wrapper {
+.activities-image-wrapper{
     width: 360px;
     height: 265px;
     display: flex;
@@ -341,16 +338,16 @@ div {
     align-items: center;
 }
 
-.activities-name {
+.activities-name{
     font-weight: 700;
     font-size: 24px;
     line-height: 1.43;
-    color: var(--activities-color);
+    color: var(--activities-color) ;
     text-align: center;
     margin-bottom: 25px;
 }
 
-.activities-name::after {
+.activities-name::after{
     display: block;
     content: "";
     width: 183px;
@@ -361,11 +358,11 @@ div {
     background-color: var(--activities-color);
 }
 
-.activities-text {
+.activities-text{
     font-size: 18px;
-    line-height: 1.43;
-    text-align: center;
-    color: ac;
+        line-height: 1.43;
+        text-align: center;
+        color: ac;
 }
 
 /* ============================= HOMEPAGE END ============================= */
@@ -375,3 +372,88 @@ div {
 
 
 /* ============================= TOMATO ALL START ============================= */
+
+.tomato-all-hero{
+    background-image: url(../images/tomato-all-hero-bg.jpg);
+    background-size: 1920px 480px;
+    width: 1920px;
+    height: 480px;
+}
+
+/* === TOMATO INFO === */
+
+.tomato-info{
+    padding: 50px 0 33px 0;
+}
+
+.tomato-info-title{
+    margin-bottom: 40px;
+}
+
+.tomato-info .x-icons{
+    margin-bottom: 40px;
+}
+
+.tomato-info-desc{
+    font-size: 17px;
+        line-height: 1.5;
+        color: var(--tomato-info-text-color);
+        margin-bottom: 20px;
+}
+
+.tomato-info-small-desc {
+    padding: 0 26px;
+    border-left: 4px solid #EB5757;
+    border-radius: 4px;
+}
+
+
+/* === TOMATO CARDS === */
+.tomato-cards{
+    padding: 50px 20px;
+    background-color: #FFFFFF;
+}
+
+.tomato-cards-title{
+    font-weight: 700;
+        font-size: 20px;
+        line-height: 1.43;
+    color: var(--tomato-cards-title-color);
+}
+
+.tomato-cards-title::after {
+content: '';
+    display: block;
+    margin-top: 15px ;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    background-color: var(--tomato-cards-title-color);
+    margin-bottom: 15px;
+}
+
+
+/* === TOMATO SMALL TEXT === */
+
+.tomato-small-text{
+    padding: 47px 0;
+}
+
+
+/* === TOMATO LINKS CARDS === */
+.tomato-links-cards{
+    padding-bottom: 50px;
+}
+
+
+.tomato-link-card-col{
+    background-color: #FFFFFF;
+    padding-bottom: 30px ;
+}
+
+.tomato-link, .tomato-link:focus, .tomato-link:hover{
+    text-align: center;
+    color: var(--tomato-links-cards-text-color);
+}
+
