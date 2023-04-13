@@ -457,3 +457,141 @@ content: '';
     color: var(--tomato-links-cards-text-color);
 }
 
+/* ============================= TOMATO ALL END ============================= */
+
+
+/* ============================= TOMATO ONE START ============================= */
+
+
+.back-to-all-tomatoes{
+    color: #57984C;
+    fill: #57984C;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-svg{
+    width: 24px;
+    height: 23px;
+}
+
+.tag-1002{
+    background-image: url(../images/tomato-one-bg.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1330px;
+}
+
+.tag-title{
+    font-weight: 700;
+        font-size: 54px;
+        line-height: 1.43;
+        color: #57984C  ;
+        
+}
+
+.tag-title span{
+    color: #324950;
+}
+
+.tag-1002 .x-icons{
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+.tag-1002 .wrapper{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.tag-1002-small-title{
+    font-weight: 700;
+    margin-left: 23px;
+        font-size: 30px;
+        line-height: 1.43;
+
+        color: #CF2333;
+}
+
+.char-title{
+    font-weight: 700;
+        font-size: 20px;
+        line-height: 1.43;
+        /* identical to box height, or 29px */
+    
+    
+        /* Buttons */
+    
+        color: #57984C;
+}
+
+.char-title::after{
+    content: "";
+
+    margin-top: 12px;
+    margin-bottom: 24px;
+    width: 183px;
+    height: 1px;
+    background-color: #57984C;
+    display: block;
+}
+
+.char-text{
+        font-size: 17px;
+        line-height: 1.63;
+        /* or 28px */
+    
+    
+        /* Text color */
+    
+        color: #324950;
+}
+
+.char-text span{
+        font-weight: 700;
+}
+
+.download{
+    font-weight: 700;
+        font-size: 17px;
+        line-height: 2;
+        /* identical to box height, or 34px */
+    
+    
+        /* Buttons */
+    
+        color: #57984C;
+        padding: 11px 28px;
+        border: 2px solid #57984C;
+        border-radius: 60px;
+        width: 225px;
+        margin-left: auto;
+}
+
+.characteristics{
+    margin-top: 30px;
+    color: #57984C;
+}
+
+.char-row{
+    margin-top: 30px;
+}
+
+.for-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.char-list-text{
+    font-size: 17px;
+        line-height: 2;
+        /* or 34px */
+    
+    
+        /* Text color */
+    
+        color: #324950;
+}
+
