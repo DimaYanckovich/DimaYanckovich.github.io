@@ -1,0 +1,145 @@
+@media (max-width: 1920px) {
+
+        .background-hero .search-items, .search-items{
+            right: 405px;
+        }
+
+        .background-hero .navigation, .navigation{
+            right: 405px;
+        }
+
+}
+
+@media (max-width: 1600px) {
+
+}
+
+@media (max-width: 1480px) {
+
+        .background-hero .search-items, .search-items{
+            right: 202px;
+        }
+
+        .background-hero .navigation, .navigation{
+            right: 202px;
+        }
+}
+
+@media (max-width: 1280px) {
+
+    /* ==== footer ===== */
+        .menu-footer-links{
+            font-size: 8px;
+        }
+        .copy{
+            font-size: 10px;
+        }
+    
+    /* ===== homepage ===== */
+    .vision-img{
+        width: 80%;
+        height: 80%;
+    }
+    .product-name{
+        text-align: center;
+        margin: 10px ;
+    }
+    .activities-image-wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    .activities-image-wrapper > img{
+        width: 100%;
+    }
+
+    /* ===== tomato all ===== */
+    .tomato-link > img{
+        margin: auto;
+        display: block;
+    }
+
+    /* ==== tomato one ===== */
+
+    .tag-title{
+        font-size: 35px;
+    }
+
+
+    /* ==== contacts ===== */
+
+
+    .char-title{
+        margin-top: 10px;
+    }
+
+    .form-button{
+        margin: 10px 0;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+        .logo, .background-hero .logo {
+                margin: auto;
+                display: block;
+                width: 113px;
+                height: 56px;
+            }
+        
+            .search-items .search ,
+            .background-hero .search-items .search  {
+                width: 170px;
+                margin-right: auto;
+            }
+        
+            .navigation,
+            .background-hero .navigation{
+                position: absolute;
+            }
+        
+        
+            .background-hero .search-items,
+            .search-items {
+                width: 200px;
+                padding-top: 10px;
+                position: static;
+                margin: auto;
+            }
+
+        .navbar,
+        .background-hero .navbar{
+            width: 80px;
+            right: 20px;
+            top: 20px;
+        }
+
+        .search-items .wrapper,
+        .background-hero .search-items .wrapper{
+            width: 200px;
+        }
+}
+
+@media (max-width: 1024px) {
+    .for-button > img{
+        width: calc(540px/2); 
+        height: calc(498px/2);
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 400px) {
+    
+}
+
+@media (max-width: 320px) {
+    .activities-image-wrapper{
+        width: 80%;
+        margin: auto;
+    }
+
+}

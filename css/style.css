@@ -140,13 +140,14 @@ h1,h2,h3,h4,h5,h6,ul,ol,p,div{
 }
 
 
-.background-hero{
+.background-hero {
     background-image: url(../images/hero-bg.jpg);
-    background-size: 1920px 850px;
+    background-size: cover  ;
     padding-top: 20px;
 
-    width: 1920px;
-    height: 850px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -156,54 +157,13 @@ h1,h2,h3,h4,h5,h6,ul,ol,p,div{
         fill: var(--x-ixons-color) ;
 }
 
+.hero-bg{
+    padding: 0;
+}
 
 /* ============================= HOMEPAGE START ============================= */
 
 /* === header === */
-
-
-.background-hero .search-items{
-    display: flex;
-    justify-content: end;
-}
-
-.background-hero .search-items .wrapper{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--header-menu-search-color);
-}
-
-.background-hero .search-icon{
-    width: 18px;
-    height: 18px;
-    fill: var(--header-menu-search-color);
-}
-
-.background-hero .search{
-    width: 332px;
-    border: 0;
-    background-color: transparent;
-}
-
-
-.background-hero .menu-list{
-    margin-top: 42px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.background-hero .menu-list-items{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.4;
-
-    color: var(--header-menu-search-color) ;
-}
-
-.background-hero .menu-list-item-links, .background-hero .menu-list-item-links:hover, .background-hero .menu-list-item-links:focus{
-    color: inherit;
-
-}
 
 
 /* === HERO === */
@@ -373,12 +333,10 @@ padding: 0 0 100px 30px;
 
 /* ============================= TOMATO ALL START ============================= */
 
-.tomato-all-hero{
-    background-image: url(../images/tomato-all-hero-bg.jpg);
-    background-size: 1920px 480px;
-    width: 1920px;
-    height: 480px;
+.tomato-all-hero > img{
+    display: block;
 }
+
 
 /* === TOMATO INFO === */
 
@@ -460,6 +418,11 @@ content: '';
 /* ============================= TOMATO ALL END ============================= */
 
 
+
+
+
+
+
 /* ============================= TOMATO ONE START ============================= */
 
 
@@ -479,8 +442,8 @@ content: '';
     background-image: url(../images/tomato-one-bg.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 1920px;
-    height: 1330px;
+    width: 100%;
+    padding-bottom: 30px;
 }
 
 .tag-title{
@@ -593,5 +556,119 @@ content: '';
         /* Text color */
     
         color: #324950;
+}
+
+/* ============================= TOMATO ONE END ============================= */
+
+
+
+
+
+
+
+/* ============================= CONTACT US START ============================= */
+
+.contact-us-hero > img{
+    display: block;
+}
+
+.contact-us-form{
+    padding-top: 50px;
+}
+
+.contact-us-form .form-title{
+    margin-bottom: 40px;
+}
+
+.contact-us-form .x-icons{
+    margin-bottom: 50px;
+}
+
+.input-name{
+    font-size: 17px;
+    line-height: 1.5;
+    color: #324950;
+}
+
+.input-class{
+    width: 100%;
+    height: 55px;
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+
+    font-size: 17px;
+    line-height: 1.5;
+    color: #324950;
+    padding-left: 10px;
+    margin-bottom: 21px;
+    margin-top: 10px;
+}
+
+.capcha{
+    display: flex;
+    align-items: baseline;
+}
+
+.capcha-item{
+    margin-right: 26px ;
+}
+
+.form-button{
+    background: #57984C;
+    border-radius: 60px;
+    font-size: 17px;
+    line-height: 200%;
+    color: #FFFFFF;
+    width: 100%;
+    border: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-end{
+    margin-bottom: 0;
+}
+
+.last-row{
+    padding-bottom: 50px;
+}
+
+/* === address info === */
+
+.address-info{
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+.address-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.43;    
+    color: #57984C;
+}
+
+.address-title::after{
+    content: "";
+    width: 183px;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 17px;
+    background-color: #57984C;
+}
+
+.address-text{
+    font-size: 17px;
+        line-height: 1.5;
+        color: #324950;
+}
+
+.address-tel{
+    color:#57984C;
 }
 

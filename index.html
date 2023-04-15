@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=320, initial-scale=1.0"/>
     <title>Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+            integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <div class="background-hero">
         <header>
             <div class="container">
-                <div class="row">
-                    <div class="col-6">
+                <div class="header-comp">
                         <img class="logo" src="images/logo.png" alt="logo" width="226" height="113">
-                    </div>
-                    <div class="col-6 navig-search">
                         <div class="search-items">
                             <div class="wrapper">
                                 <input class="search" type="search" placeholder="Search">
@@ -37,31 +36,48 @@
                                 </svg>
                             </div>
                         </div>
-                        <nav class="navigation">
-                            <ul class="menu-list list">
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">Home</a>
-                                </li>
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">Company Profile</a>
-                                </li>
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">Products</a>
-                                </li>
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">Services</a>
-                                </li>
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">R & D</a>
-                                </li>
-                                <li class="menu-list-items">
-                                    <a class="menu-list-item-links link" href="">Contact</a>
-                                </li>
-                            </ul>
+
+                        <nav class="navbar bg-light navbar-expand-xl navigation">
+                            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+                                <span class="navbar-toggler-icon">
+                                    <svg class="nav-icon">
+                                        <use href="images/icons.svg#icon-nav"></use>
+                                    </svg>
+
+
+                                </span>
+                            </button>
+                            <div id="my-nav" class="collapse navbar-collapse">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="">Home</a>
+                                    </li>
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="">Company Profile</a>
+                                    </li>
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="tomato-all.html">Products</a>
+                                    </li>
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="">Services</a>
+                                    </li>
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="">R & D</a>
+                                    </li>
+                                    <li class="nav-item active menu-list-items">
+                                        <a class="nav-link menu-list-item-links link" href="contact.html">Contact</a>
+                                    </li>
+                                    </ul>
+                            </div>
                         </nav>
-                    </div>
                 </div>
             </div>
+            
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
             <section class="hero">
                 <h1 class="hero-title">
@@ -74,75 +90,75 @@
         </header>
         <!-- HEADER -->
     </div>
-
+    
 
 
     <!-- MAIN -->
     <main>
         <!-- PRODUCTS -->
-        <section class="products">
-            <ul class="products-list list">
-                <li class="products-list-item">
+        <section class="products container-fluid">
+            <ul class="products-list list row">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="22" height="53">
                             <use href="images/icons.svg#icon-product-1"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Wheat</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="49" height="49">
                             <use href="images/icons.svg#icon-product-2"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Confection Watermelone</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="48" height="52">
                             <use href="images/icons.svg#icon-product-3"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Clover</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="42" height="54">
                             <use href="images/icons.svg#icon-product-4"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Confection Sunflower</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="57" height="54">
                             <use href="images/icons.svg#icon-product-5"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Tomato</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="58" height="52">
                             <use href="images/icons.svg#icon-product-6"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Eggplant P/O</p>
                 </li>
-                <li class="products-list-item">
+                <li class="products-list-item col-12 col-xl-1 col-lg-3">
                     <div class="wrapper">
                         <svg class="product-svg" width="58" height="58">
                             <use href="images/icons.svg#icon-product-7"></use>
                         </svg>
                     </div>
-
+                    
                     <p class="product-name">Ornamental Sunflower</p>
                 </li>
             </ul>
@@ -156,38 +172,36 @@
         <section class="vision">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 vision-col vision-col-text-left">
+                    <div class="col-12 col-lg-6 vision-col vision-col-text-left">
                         <h2 class="vision-title">Vision</h2>
-                        <svg class="x-icons">
+                        <svg class="x-icons">  
                             <use href="images/icons.svg#icon-x"></use>
                         </svg>
                         <p class="vision-text">
-                            We believe in long-term growth with an emphasis on the potential of emerging markets. We
-                            also support the global need of
+                            We believe in long-term growth with an emphasis on the potential of emerging markets. We also support the global need of
                             feeding the growing population.
                         </p>
                     </div>
-                    <div class="col-6 vision-col">
+                    <div class="col-12 col-lg-6 vision-col">
                         <img class="vision-img" src="images/main-img-1.jpg" alt="grass" width="540" height="500">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 vision-col">
+                    <div class="col-12 col-lg-6 vision-col">
                         <img class="vision-img" src="images/main-img-2.jpg" alt="grass" width="540" height="500">
                     </div>
-                    <div class="col-6 vision-col vision-col-text-right">
+                    <div class="col-12 col-lg-6 vision-col vision-col-text-right">
                         <h2 class="vision-title">Mission</h2>
-                        <svg class="x-icons">
+                        <svg class="x-icons">  
                             <use href="images/icons.svg#icon-x"></use>
                         </svg>
                         <p class="vision-text">
-                            Breeding and marketing seeds for advanced field crops and vegetable varieties that provide
-                            an added value to all supply
+                            Breeding and marketing seeds for advanced field crops and vegetable varieties that provide an added value to all supply
                             chain partners.
                         </p>
                     </div>
                 </div>
-            </div>
+                </div>
             </div>
         </section>
         <!-- VISION -->
@@ -208,36 +222,32 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <a href="" class="link">
-                            <div class="activities-image-wrapper"><img src="images/main-activities-1.png" alt="seeds">
-                            </div>
+                            <div class="activities-image-wrapper"><img src="images/main-activities-1.png" alt="seeds"></div>
                             <h3 class="activities-name">Open field crop seeds</h3>
                             <p class="activities-text">wheat, cotton, legumes, hybrid confection sunflower</p>
                         </a>
-
+                        
                     </div>
-                    <div class="col-4">
-                        <a href="" class="link">
-                            <div class="activities-image-wrapper"><img src="images/main-activities-2.png"
-                                    alt="vegetable"></div>
+                    <div class="col-12 col-lg-4">
+                        <a href="tomato-all.html" class="link">
+                            <div class="activities-image-wrapper"><img src="images/main-activities-2.png" alt="vegetable"></div>
                             <h3 class="activities-name">Vegetable seeds</h3>
                             <p class="activities-text">hybrid open field tomatoes, eggplant, onion, paprika, etc
                         </a>
                         .</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <a class="link" href="">
-                            <div class="activities-image-wrapper"><img src="images/main-activities-3.png" alt="seeds">
-                            </div>
+                            <div class="activities-image-wrapper"><img src="images/main-activities-3.png" alt="seeds"></div>
                             <h3 class="activities-name">Ornamental seeds</h3>
-                            <p class="activities-text">hybrid cut sunflowers, hybrid patio tomatoes, Bells of Irland,
-                                etc.</p>
+                            <p class="activities-text">hybrid cut sunflowers, hybrid patio tomatoes, Bells of Irland, etc.</p>
                         </a>
-
+                        
                     </div>
                 </div>
             </div>
@@ -251,83 +261,82 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-9">
-                    <ul class="menu-footer-list list">
-                        <li class="menu-footer-list-items">
+                <div class="col-12 col-lg-8 container-fluid">
+                    <ul class="menu-footer-list list row justify-content-center">
+                        <li class="menu-footer-list-items col-lg-2">
                             <a class="menu-footer-links link" href="">PROFILE</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-2">
                             <a class="menu-footer-links link" href="">MANAGEMENT</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-2">
                             <a class="menu-footer-links link" href="">PRODUCTS</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-1">
                             <a class="menu-footer-links link" href="">R&D</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-1">
                             <a class="menu-footer-links link" href="">LINKS</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-2">
                             <a class="menu-footer-links link" href="">SITEMAP</a>
                         </li>
-                        <li class="menu-footer-list-items">
+                        <li class="menu-footer-list-items col-lg-2">
                             <a class="menu-footer-links link" href="">CONTACT</a>
                         </li>
                     </ul>
                 </div>
-
-                <div class="col-3">
+                        
+                <div class="col-12 col-lg-3">
                     <ul class="social-list list">
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-in"></use>
                                 </svg>
                             </a>
-
+                            
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
-
+                            
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-youtube"></use>
                                 </svg>
                             </a>
-
+                            
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
-                                <svg class="social-icons">
+                            <a class="social-links" href="">
+                                <svg class="social-icons" >
                                     <use href="images/icons.svg#icon-twitter"></use>
                                 </svg>
                             </a>
-
+                            
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
-
+                            
                         </li>
                     </ul>
                 </div>
             </div>
-
+            
         </div>
 
         <p class="copy">AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
     </footer>
     <!-- FOOTER -->
 </body>
-
 </html>

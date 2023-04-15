@@ -18,8 +18,10 @@ footer{
 
 .menu-footer-list{
     display: flex;
-    justify-content: space-between;
-    column-gap: 10px;
+}
+
+.menu-footer-list-items{
+    margin-right: 0px;
 }
 
 .menu-footer-links{
