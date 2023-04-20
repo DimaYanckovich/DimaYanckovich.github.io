@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -75,14 +81,12 @@
     </header>
     <!-- HEADER -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
 
     <!-- MAIN -->
     <main>
-        <section class="tag-1002 container">
+        <section class="tag-1002 container" v-if="product">
             <a href="tomato-all.html" class="back-to-all-tomatoes link">
                 <svg class="arrow-svg">
                     <use href="images/icons.svg#icon-arrow"></use>
@@ -92,16 +96,18 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <h1 class="tag-title">
-                        <span>TAG 1002 (TAG 809)<br></span>
-                        Tomato Determinate<br>
-                        Red Standard Round<br>
+                        <span>{{ product.title }}<br></span>
+                        {{ product.short_text }}
                     </h1>
                     <svg class="x-icons">
                         <use href="images/icons.svg#icon-x"></use>
                     </svg>
                     <div class="wrapper">
-                        <img src="images/tag-1002-tomatoes.png" alt="tomato" width="80" height="80">
+                        <img :src="`/assets/img/${product.image}`" :alt="product.title" width="80" height="80">
                         <h2 class="tag-1002-small-title">Very high yield and excellent fruits quality!</h2>
+                    </div>
+                    <div>
+                        {{ product.desc }}
                     </div>
                     <div class="char">
                         <h3 class="char-title">CHARACTERISTICS</h3>
@@ -114,8 +120,22 @@
                 </div>
 
                 <div class="col-12 col-lg-6 for-button">
-                    <img class="tag-1002-img" src="images/tomato-link-card-3.jpg" alt="tomato" width="520px" height="478px">
-                    <button type="button" class="download">Download pdf</button>
+                    <img class="tag-1002-img" :src="`/assets/img/${product.image}`" :alt="product.title" width="520px" height="478px">
+                    <button
+                        v-if="!btnVisible"
+                        type="button"
+                        class="download"
+                        @click.prevent="addToCart(product.id)"
+                    >
+                        Add to cart
+                    </button>
+                    <button
+                        v-if="btnVisible"
+                        type="button"
+                        class="download"
+                    >
+                        Go to cart
+                    </button>
                 </div>
                 
                 <div class="characteristics container">
@@ -215,44 +235,44 @@
                 <div class="col-12 col-lg-3">
                     <ul class="social-list list">
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-in"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-youtube"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-twitter"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                     </ul>
                 </div>

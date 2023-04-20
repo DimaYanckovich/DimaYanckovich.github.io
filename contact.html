@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="css/middle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -76,8 +82,6 @@
     <!-- HEADER -->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
 
@@ -97,16 +101,25 @@
                 <use href="images/icons.svg#icon-x"></use>
             </svg>
 
-            <form action="get">
+            <table style="width: 100%;">
+                 <tr v-for="p in cart">
+                     <th><img :src="`/assets/img/${p.image}`" :alt="p.title" width="80"></th>
+                     <th>{{ p.title }}</th>
+                     <th>{{ p.short_text }}</th>
+                     <th><a href="#" @click.prevent="removeFromCart(p.id)">х</a></th>
+                 </tr>
+            </table>
+
+            <form v-if="formVisible" action="get">
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <p class="input-name">Name *</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.name" class="input-class" type="text" required>
                     </div>
                     <div class="col-1"></div>
                     <div class="col-12 col-lg-7">
                         <p class="input-name">You are a</p>
-                        <select class="input-class" name="you-are-a" id="you-are-a">
+                        <select v-model="contactFields.you_are" class="input-class" name="you-are-a" id="you-are-a">
                             <option value="seed">seed producer</option>
                         </select>
                     </div>
@@ -116,30 +129,30 @@
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <p class="input-name">Company Name</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.company_name" class="input-class" type="text">
                     </div>
                     <div class="col-1"></div>
                     <div class="col-12 col-lg-7">
                         <p class="input-name">If other, please specify</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.specify" class="input-class" type="text">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <p class="input-name">Position</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.position" class="input-class" type="text">
                         <p class="input-name">City</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.city" class="input-class" type="text">
                         <p class="input-name">Country</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.country" class="input-class" type="text">
                         <p class="input-name">Telephone</p>
-                        <input class="input-class" type="text">
+                        <input v-model="contactFields.telephone" class="input-class" type="text">
                     </div>
                     <div class="col-1"></div>
                     <div class="col-12 col-lg-7">
                         <p class="input-name text-area-class">You are interested in</p>
-                        <textarea class="input-class" style="height: 390px;" name="interested" id="interested" cols="30" rows="10"></textarea>
+                        <textarea v-model="contactFields.interested" class="input-class" style="height: 390px;" name="interested" id="interested" cols="30" rows="10"></textarea>
                     </div>
                 </div>
 
@@ -147,7 +160,7 @@
                 <div class="row align-items-end last-row">
                     <div class="col-12 col-lg-4">
                         <p class="input-name">Email *</p>
-                        <input class="input-class form-end" type="email">
+                        <input v-model="contactFields.email" class="input-class form-end" type="email" required>
                     </div>
                     <div class="col-1"></div>
                     <div class="col-12 col-lg-4">
@@ -158,12 +171,24 @@
                         </div>
                     </div>
                     <div class="col-col-12 col-lg-3">
-                        <button class="form-button">Send Message</button>
+                        <button class="form-button" @click.prevent="makeOrder()">Send Message</button>
                     </div>
                 </div>
 
 
             </form>
+            <div v-else>
+                <b>Name:</b> {{ contactFields.name }}<br>
+                <b>Company name:</b> {{ contactFields.company_name }}<br>
+                <b>Position:</b> {{ contactFields.position }}<br>
+                <b>City:</b> {{ contactFields.city }}<br>
+                <b>Country:</b> {{ contactFields.country }}<br>
+                <b>Telephone:</b> {{ contactFields.telephone }}<br>
+                <b>Email:</b> {{ contactFields.email  }}<br>
+                <b>You are a:</b> {{ contactFields.you_are  }}<br>
+                <b>If other, please specify:</b> {{ contactFields.specify  }}<br>
+                <b>You are interested in:</b> {{ contactFields.interested  }}<br>
+            </div>
         </section>
         <!-- CONTACT-US-FORM -->
 
@@ -216,44 +241,44 @@
                 <div class="col-12 col-lg-3">
                     <ul class="social-list list">
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-in"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-instagram"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-youtube"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-twitter"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                         <li class="social-list-items">
-                            <a class="social-links">
+                            <a class="social-links" href="">
                                 <svg class="social-icons">
                                     <use href="images/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
-    
+                        
                         </li>
                     </ul>
                 </div>
